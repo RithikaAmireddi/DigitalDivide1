@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website Title</title>
+    <style>
+        body {
+            background-image: url('Untitled_Artwork.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .custom-cursor {
+            position: absolute;
+            top: 50%; /* Position at the top half of the screen */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: none; /* Hide the default cursor */
+        }
+
+        .custom-cursor img {
+            width: 70px; /* Adjust the size of the custom cursor image */
+            height: 70px;
+        }
+
+        /* Define a link that is initially hidden */
+        .hidden-link {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your website content goes here -->
+    <p style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 24px; color: white;">Place the Device in their hands</p>
+    <p>This is some content on your website.</p>
+
+    <!-- Create a custom cursor div to hold the image -->
+    <div class="custom-cursor">
+        <img src="Phone1.png" alt="Custom Cursor">
+    </div>
+
+    <!-- Create a hidden link with the actual URL -->
+    <a class="hidden-link" href="file.html">Place Here</a>
+
+    <script>
+        // JavaScript to make the custom cursor follow the mouse
+        const customCursor = document.querySelector('.custom-cursor');
+        const hiddenLink = document.querySelector('.hidden-link');
+    
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+    
+            // Check if the cursor is near the center of the screen
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            const middleX = screenWidth / 2;
+            const middleY = screenHeight / 2;
+            const threshold = 50; // Adjust this threshold as needed
+    
+            if (
+                e.clientX >= middleX - threshold &&
+                e.clientX <= middleX + threshold &&
+                e.clientY >= middleY - threshold &&
+                e.clientY <= middleY + threshold
+            ) {
+                // Show the hidden link
+                hiddenLink.style.display = 'block';
+            } else {
+                // Hide the link
+                hiddenLink.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
+

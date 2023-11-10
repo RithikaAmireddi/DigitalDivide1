@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Divide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        /* CSS Reset */
+        body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            color: #777;
+            line-height: 1.8;
+            background: #E5D3B3;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&q=80&w=2226&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            min-height: 100%;
+        }
+
+        /* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  min-height: 400px;
+}
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right"
+            href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space: nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Digital Divide in India</span>
+    </div>
+</div>
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-row">
+        <div class="w3-col m6"  style="text-align: left;">
+            <h3 style="font-size: 30px;">What is Digital Divide</h3>
+            <p> The digital divide refers to the gap between those who have access to information and communication technologies and those who do not. 
+                This gap can be caused by various factors, including income inequality, geography, education, and age. The digital divide can have a significant 
+                impact on people's lives. It limits access to education, employment, healthcare, and other essential services. People with computers and internet 
+                access have access to a whole world of information and opportunities, while those without it are left behind.
+                The digital divide isn't only about owning a computer or having internet access; it's about knowing how to use technology to learn, work, and connect with others.
+                It's about taking advantage of all the things the digital world has to offer.
+            </p>
+        </div>
+        <div class="w3-col m6">
+            <div class="image-container" style="margin-left: 80px; margin-top: 60px;" onclick="changeImage()">
+                <img id="image1" src="Untitled (3).png" alt="Image Description" style="max-width: 100%;">
+                <img id="image2" src="Untitled (2).png" alt="Another Image Description" style="max-width: 100%; display: none;">
+                <div class="hover-box"></div>
+            </div>
+        </div>
+        
+        <script>
+            function changeImage() {
+                var image1 = document.getElementById("image1");
+                var image2 = document.getElementById("image2");
+        
+                // Toggle the visibility of the images
+                if (image1.style.display === "block" || image1.style.display === "") {
+                    image1.style.display = "none";
+                    image2.style.display = "block";
+                } else {
+                    image1.style.display = "block";
+                    image2.style.display = "none";
+                }
+            }
+        </script>
+        
+        
+
+
+
+<div class="w3-content w3-container w3-padding-64" id="welcome">
+    <div class="w3-row">
+        <div class="w3-col m12"> <!-- Set the column width to m12 to take up the full width -->
+            <div class="w3-container" style="text-align: justify;">
+                <h3 style="font-size: 30px;">The Impact of the Divide</h3>
+                <p>In today's digital age, having access to technology isn't just a luxury; it's a necessity. But here in India, there's a significant gap between those who have digital tools at their fingertips and those who don't. This divide has some pretty serious consequences, affecting not only individual lives but society as a whole.
+
+                    Think about it: for many folks in India, not being connected digitally means missing out on job opportunities. Without the right skills and access to technology, they're left out of the thriving digital job market, struggling to make ends meet.
+
+                    Businesses in remote or less-connected areas face a similar problem. It's tough for them to compete globally, which puts a damper on economic growth and innovation. And that, in turn, holds back the progress of the whole country.
+
+                    Now, when it comes to education, things get even trickier. Students in rural areas or from disadvantaged backgrounds often can't get quality online education. This just makes the educational gap wider, keeping social inequalities in place. It's like a cycle that's hard to break.
+
+                    But it's not just education. The digital divide also means some people can't access crucial information about healthcare, government services, or social welfare programs. So, they end up with poor health, miss out on educational opportunities, and can't access the benefits they should.
+
+                    And what about being part of the community? With limited digital skills and access, a lot of Indians can't fully participate in discussions, elections, or speak up about important issues. That weakens our democratic processes and leaves out voices from marginalized communities.
+
+                    On a personal level, the digital divide leads to loneliness and missed chances for personal growth. Without digital tools, it's hard to connect with family, friends, and the wider world.
+
+                    And having to go in person for basic services like banking or government stuff? That's a hassle, especially for people in rural areas or those who don't have many resources. It's like an extra burden they shouldn't have to carry.
+
+                    Lastly, without access to online learning and digital resources, it's tough for individuals to learn new skills and grow personally. In a world that's becoming more and more digital, that's a big disadvantage.
+
+                    Bridging this digital divide in India isn't just about giving people access to technology. It's about making our society fairer and more inclusive for everyone. We need to fix infrastructure issues, teach digital skills, and make sure technology is affordable so that everyone can thrive in the digital age.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">Marginalised Groups in India Stuggling to Bidge the Digital Divide</span>
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <title>Digital Divide in India</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f2f2f2;
+              text-align: center;
+              margin: 0;
+              padding: 0;
+          }
+  
+          #buttons {
+              margin-top: 20px;
+          }
+  
+          .button {
+              background-color: #3498db;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              margin: 5px;
+              transition: background-color 0.3s;
+          }
+  
+          .button:hover {
+              background-color: #2980b9;
+          }
+  
+          .button.clicked {
+              background-color: #2ecc71;
+          }
+  
+          .content-section {
+              margin-top: 50px;
+          }
+  
+          #slide1, #slide2, #slide3 {
+              height: 100vh; /* Make each section take up the full height of the viewport */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+          }
+  
+          #content {
+              padding: 20px;
+          }
+      </style>
+  </head>
+  <body>
+  
+  <div id="buttons">
+      <button class="button" onclick="scrollToSlide(1)">Gender Disparities </button>
+      <button class="button" onclick="scrollToSlide(2)">Caste Inequalities</button>
+      <button class="button" onclick="scrollToSlide(3)">Rural-Urban Divides</button>
+  </div>
+  
+  <div id="slide1" class="content-section">
+      <div id="content">
+          <h2 style="font-size: 30px;">Gender Disparities</h2>
+          <p>Only 31% of women own a mobile phone in India compared to over 60% of men. The gender gap — between men
+              and women is not only about cellular phones and internet access. This inequity also shows all the other biases
+              that India's women have had to face — from a disparity in education opportunities to moral policing. Women are
+              often more likely to live in poverty, limiting their ability to afford internet access and devices.
+              They also have lower literacy rates and limited access to education, hindering their digital literacy and skills.
+              In India, smartphones have become a source of conflict regarding gender issues. Some rural communities restrict
+              unmarried young women from using phones due to safety concerns surrounding online harassment and privacy violations. Such restrictions
+              make women hesitant to engage fully in the online world.</p>
+      </div>
+  </div>
+
+  
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Water Filling Stats Bars</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f2f2f2;
+              text-align: center;
+          }
+  
+          .stats-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 300px;
+              margin-top: 0px;
+          }
+  
+      .bar-container {
+          width: 100px; /* Adjust the width to make the bars thicker */
+          height: 400px; /* Adjust the height to make the bars longer */
+          margin: 100px; /* Adjust the margin to make the bars further apart */
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          position: relative;
+          background-repeat: no-repeat;
+          background-size: 250%; /* Adjust the size of the background image (e.g., 150%) */
+          background-position: center center; /* Center the background image */
+      }
+  
+  
+          .water-red, .water-green {
+              width: 100%;
+              height: 0; /* Set an initial height to 0 */
+              background-color: transparent; /* Set an initial background-color to transparent */
+              transition: height 1s ease-in-out, background-color 1s ease-in-out; /* Apply transition to height and background-color */
+          }
+  
+          .water-red {
+              background-color: #ff0000; /* Red bar */
+          }
+  
+          .water-green {
+              background-color: #00ff00; /* Green bar */
+          }
+      </style>
+  </head>
+  <body>
+  
+      <div class="stats-container">
+          <div class="bar-container">
+              <div class="water-red" id="water1"></div>
+          </div>
+          <div class="bar-container">
+              <div class="water-green" id="water2"></div>
+          </div>
+      </div>
+  
+      <script>
+          // Function to set the water level of a bar with animation
+          function setWaterLevel(barId, percentage) {
+              const water = document.getElementById(barId);
+              if (water) {
+                  water.style.height = percentage + '%';
+                  water.style.backgroundColor = (percentage === 100) ? 'transparent' : water.style.backgroundColor;
+              }
+          }
+  
+          // Set the water levels for the bars with animation
+          setTimeout(() => {
+              setWaterLevel('water1', 31); // Set the water level for the red bar
+          }, 1000); // Delay the animation to allow the page to load
+          setTimeout(() => {
+              setWaterLevel('water2', 60); // Set the water level for the green bar
+          }, 2000); // Delay the animation for the green bar
+      </script>
+  </body>
+  </html>
+
+  <div style="margin-top: 100px"></div>
+  <p> The Red graph above represents the 30% women and the Green graph represent the 61% men that use the internet!</p>
+    <ul>
+        <li>Indian women are 15% less likely to own a mobile phone, and 33% less likely to use mobile internet services than men.</li>
+        <li>In rural India, the gender gap in internet usage is even wider, with only 8% of women using the internet, compared to 20% of men.</li>
+        <li>The gender gap in internet usage is also wider among women from marginalized groups, such as women from low-income households, women with disabilities, and women from rural areas.</li>
+    </ul>
+  </div>
+
+
+  
+  <div id="slide2" class="content-section">
+      <div id="content">
+          <h2 style="font-size: 30px;">Caste Inequalities</h2>
+          <p>In India, the digital revolution has changed many people's lives,
+              but not everyone's. For many people from lower castes, the
+              internet and digital technologies are still out of reach.
+              This digital divide is deeply rooted in India's complex caste system and
+              has far-reaching consequences, limiting opportunities and perpetuating social inequalities.
+              Given the increasing role of technology in providing access to essential services like education and healthcare,
+              the issue of the digital divide based on caste in India, where large socioeconomic
+              gaps persist between different caste groups, demands urgent attention.</p>
+      </div>
+  </div>
+
+  <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Interactive Pie Charts</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            /* CSS styles for the chart containers */
+            .chart-container {
+                width: 400px;
+                height: 400px;
+                margin: 20px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chart-container">
+            <h3>Access to Formal Financial Services (%)</h3>
+            <canvas id="financialServicesChart"></canvas>
+            <p>Understanding: Access to formal financial services is highest among the General Category and lowest among the ST category.</p>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Access to Computers (%)</h3>
+            <canvas id="computersChart"></canvas>
+            <p>Understanding: The General Category has better access to computers compared to other categories.</p>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Literacy Rate (%)</h3>
+            <canvas id="literacyRateChart"></canvas>
+            <p>Understanding: Literacy rates are the highest in the General Category, followed by OBC, SC, and ST.</p>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Average Years of Schooling</h3>
+            <canvas id="schoolingChart"></canvas>
+            <p>Understanding: General Category has the highest average years of schooling, while ST has the lowest.</p>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Unemployment Rate (%)</h3>
+            <canvas id="unemploymentRateChart"></canvas>
+            <p>Understanding: The General Category generally has lower unemployment rates compared to other categories.</p>
+        </div>
+    
+        <script>
+            // Data for the pie charts
+            var categories = ["General Category", "OBC", "SC", "ST"];
+            var accessToFinancialServices = [80, 75, 65, 55];
+            var accessToComputers = [70, 65, 55, 45];
+            var literacyRate = [74, 71, 67, 59];
+            var averageSchooling = [6.2, 5.8, 5.2, 4.5];
+            var unemploymentRate = [6, 7, 8, 10];
+    
+            function createPieChart(containerId, data, label) {
+                var ctx = document.getElementById(containerId).getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: categories,
+                        datasets: [{
+                            data: data,
+                            backgroundColor: ["#FFC3A0", "#FFDCA0", "#FFEDB0", "#FFF6C1"]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        tooltips: {
+                            callbacks: {
+                                label: function (tooltipItem, data) {
+                                    return data.labels[tooltipItem.index] + ': ' + data.datasets[0].data[tooltipItem.index] + '%';
+                                }
+                            }
+                        },
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        }
+                    }
+                });
+            }
+    
+            createPieChart("financialServicesChart", accessToFinancialServices, "Access to Formal Financial Services (%)");
+            createPieChart("computersChart", accessToComputers, "Access to Computers (%)");
+            createPieChart("literacyRateChart", literacyRate, "Literacy Rate (%)");
+            createPieChart("schoolingChart", averageSchooling, "Average Years of Schooling");
+            createPieChart("unemploymentRateChart", unemploymentRate, "Unemployment Rate (%)");
+        </script>
+    </body>
+    </html>
+  
+  <div id="slide3" class="content-section">
+      <div id="content">
+          <h2 style="font-size: 30px;">Rural-Urban Divides</h2>
+          <p>As India moves forward in a digital world, a big difference exists
+              between rural and urban areas in how they use technology. While
+              urban India is using the latest technology, rural India is having
+              trouble keeping up. This is because rural areas don't have the same
+              infrastructure, internet, or training as urban areas. This gap is
+              having a big impact on rural communities, making it harder for them
+              to get ahead. 
+              According to the 2022 National Family Health Survey (NFHS), only 48.7% of rural Indians have ever used the internet, compared to 72.5% of urban Indians.
+              There are a lot of factors that contribute to the digital divide between rural and urban India. One of the factors is infrastructure. Rural areas usually have less reliable and slower internet connections than urban areas. The next thing is affordability. Smartphones and data plans are more expensive in rural areas than in urban areas.
+              Another factor is education. Rural Indians have less access to quality education, which can make it difficult for them to learn how to use digital technologies. </p>
+      </div>
+  </div>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Mind Map: Digital Divide in Rural and Urban Places</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f5f5f5;
+              margin: 0;
+              padding: 0;
+          }
+          #mind-map {
+              width: 600px;
+              margin: 50px auto;
+              background-color: #fff;
+              border: 1px solid #ccc;
+              padding: 20px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+          .topic {
+              font-size: 18px;
+              font-weight: bold;
+          }
+          .branch {
+              margin-left: 20px;
+          }
+          /* Pastel colors */
+          .infrastructure-gap {
+              color: #ffcc99;
+          }
+          .socioeconomic-factors {
+              color: #99cc99;
+          }
+          .geographic-challenges {
+              color: #99cccc;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="mind-map">
+          <div class="topic">Digital Divide in Rural and Urban Places</div>
+          <ul class="branch">
+              <li class="infrastructure-gap">
+                  Infrastructure Gap
+                  <ul class="branch">
+                      <li>Limited broadband availability in rural areas</li>
+                      <li>Lack of access to computers and devices</li>
+                      <li>Inadequate communication infrastructure</li>
+                  </ul>
+              </li>
+              <li class="socioeconomic-factors">
+                  Socioeconomic Factors
+                  <ul class="branch">
+                      <li>Lower income levels in rural areas</li>
+                      <li>Limited digital literacy and education</li>
+                      <li>Language barriers and cultural differences</li>
+                  </ul>
+              </li>
+              <li class="geographic-challenges">
+                  Geographic Challenges
+                  <ul class="branch">
+                      <li>Remote locations and difficult terrain</li>
+                      <li>Higher costs of infrastructure deployment</li>
+                      <li>Limited competition among service providers</li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </body>
+  </html>
+  
+  <script>
+      function scrollToSlide(slideNumber) {
+          var slideId = 'slide' + slideNumber;
+          var slideElement = document.getElementById(slideId);
+  
+          if (slideElement) {
+              slideElement.scrollIntoView({ behavior: 'smooth' });
+  
+              // Reset all buttons to default color
+              var buttons = document.getElementsByClassName('button');
+              for (var i = 0; i < buttons.length; i++) {
+                  buttons[i].classList.remove('clicked');
+              }
+  
+              // Set the clicked button to a different color
+              buttons[slideNumber - 1].classList.add('clicked');
+          }
+      }
+  </script>
+  
+  </body>
+  </html>
+
+<!-- Element used to open the lightbox -->
+<div class="row">
+    <!-- Add a new div for the YouTube video -->
+    <div class="column">
+        <div class="clickable" onclick="openModal();currentSlide(1)">
+            <!-- Replace 'VIDEO_ID' with the actual YouTube video ID -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IsaoB5PByDE" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JavaScript functions for the lightbox -->
+<script>
+    function openModal() {
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName('mySlides');
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[slideIndex - 1].style.display = 'block';
+    }
+</script>
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <style>
+          body {
+              margin: 0;
+              padding: 0;
+              font-family: Arial, sans-serif;
+          }
+  
+          .content {
+              min-height: calc(100vh - 40px);
+              display: flex; /* Use flexbox to align items */
+              justify-content: space-between; /* Distribute space between items */
+              background-color: #f0f0f0;
+          }
+  
+          .box {
+              flex: 1; /* Equal distribution of space */
+              background-color: #ffd700; /* Default background color */
+              text-align: center;
+              padding: 50px;
+              box-sizing: border-box; /* Include padding and border in the total width and height */
+          }
+  
+          .box:nth-child(2) {
+              background-color: #808080; /* Background color for the second box */
+          }
+  
+          h2, p {
+              margin: 10px 0; /* Add margin for better spacing */
+          }
+  
+          footer {
+              background-color: #333;
+              color: #fff;
+              text-align: center;
+              padding: 5px;
+              margin: 0;
+          }
+  
+          footer a {
+              color: #fff;
+              text-decoration: none;
+              margin: 0;
+          }
+  
+          footer p {
+              margin: 0;
+          }
+  
+          .flip-box {
+              background-color: transparent;
+              width: 300px;
+              height: 200px;
+              border: 1px solid #f1f1f1;
+              perspective: 1000px;
+              margin-top: 20px; /* Adjust the margin between flip boxes */
+          }
+  
+          .flip-box-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+          }
+  
+          .flip-box:hover .flip-box-inner {
+              transform: rotateY(180deg);
+          }
+  
+          .flip-box-front, .flip-box-back {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+          }
+  
+          .flip-box-front {
+              background-color: #bbb;
+              color: black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+  
+          .flip-box-front img {
+              max-width: 100%;
+              max-height: 100%;
+              display: block;
+          }
+  
+          .flip-box-back {
+              background-color: dodgerblue;
+              color: white;
+              transform: rotateY(180deg);
+          }
+      </style>
+  </head>
+  <body>
+  
+  <div class="content" id="section-connectivity">
+      <div class="box">
+          <h2 style="font-size: 30px;">A digitally empowered India</h2>
+          <p>Welcome to a digitally empowered India, where technology is transforming lives.</p>
+          <div class="flip-box">
+              <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                      <img src="Hyd.jpeg" alt="Front Side Image">
+                  </div>
+                  <div class="flip-box-back">
+                      <p>A bustling, connected urban center, where high-speed internet and modern technology,
+                        technology empowers people to create, innovate, and connect in new and exciting ways. Where everyone has the opportunity to benefit from the power of technology.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="Kid1 2.jpeg" alt="Front Side Image">
+              </div>
+              <div class="flip-box-back">
+                <h2>A world of knowledge at their fingertips, where students can explore topics at their own pace and in their own way.
+A collaborative learning environment, where students from all over the world can work together on projects and share ideas.</h2>
+              </div>
+            </div>
+          </div>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="paytm 2.jpeg" alt="Front Side Image">
+              </div>
+              <div class="flip-box-back">
+                <h2>
+                    A bustling online marketplace, where consumers shop with ease and confidence, using the latest digital payment methods.
+                    Readily available products and services, with the convenience of one-click checkout and secure payment processing.</h2>
+              </div>
+            </div>
+          </div>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="med.jpeg" alt="Front Side Image">
+              </div>
+              <div class="flip-box-back">
+                <h2>A convenient and accessible way to connect with doctors, specialists, and other healthcare providers, regardless of your location.
+
+                    A personalized and proactive approach to healthcare, where technology helps you to monitor your health, manage your conditions, and prevent future problems.</h2>
+              </div>
+            </div>
+          </div>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="goodinter.jpeg" alt="Front Side Image">
+              </div>
+              <div class="flip-box-back">
+                <h2>High-speed internet cafes provide people with access to high-speed internet and computers at an affordable price. This makes it possible for people to work remotely, start their own businesses, and access educational resources and entertainment.</h2>
+              </div>
+            </div>
+          </div>  
+      </div>
+
+      
+  
+      <div class="box">
+          <h2 style="font-size: 30px; color: white;">India with Fragmented Connectivity</h2>
+          <p style= "color: white;"> Welcome to the Land of digitally divided.</p>
+          <div class="flip-box">
+              <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                      <img src="slate 2.jpeg" alt="Front Side Image">
+                  </div>
+                  <div class="flip-box-back">
+                      <h2>Limited or nonexistent digital infrastructure in the educational sector can significantly impact students' learning outcomes. It can make it difficult for students to access online educational resources</h2>
+                  </div>
+              </div>
+          </div>
+          <!-- Add a new .flip-box here -->
+          <div class="flip-box">
+              <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                      <img src="nointer 2.jpeg" alt="Front Side Image">
+                  </div>
+                  <div class="flip-box-back">
+                      <h2>
+                        A world where limited or slower internet connections hinder progress, excluding many from the digital revolution.</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="gover.jpeg" alt="Front Side Image">
+                </div>
+                <div class="flip-box-back">
+                    <h2>
+                        Limited access to healthcare in a digitally excluded world can lead to an increased risk of preventable deaths and illnesses, delays in diagnosis and treatment, and a reduced quality of life.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="social 2.jpeg" alt="Front Side Image">
+                </div>
+                <div class="flip-box-back">
+                    <h2>Social exclusion due to limited access to digital technologies in a digitally excluded world can lead to isolation, loneliness, and a decreased sense of community.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="work 2.jpeg" alt="Front Side Image">
+                </div>
+                <div class="flip-box-back">
+                    <h2>People who are digitally excluded may face a number of work exclusions, such as difficulty finding and applying for jobs or even performing certain job tasks.</h2>
+                </div>
+            </div>
+        </div>
+
+      </div>
+  </div>
+  
+  </body>
+  </html>
+  
+
+  
+  <!-- Other content goes here -->
+  
+  </body>
+  </html>
+  
+
+
+
+<!-- JavaScript to scroll to the next section when the button is clicked -->
+<script>
+    function goToNextSection() {
+        // Assuming the next section has an ID named 'next-section'
+        var nextSection = document.getElementById('next-section');
+
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+    
+        <footer>
+            <!-- Your footer content goes here -->
+            &copy; 2023 Marginalised Groups in India Struggling to Bridge the Digital Divide | 
+            <p>Citations:
+                Admin. “Digital Divide in India: Implications, Measures for India’s Digital Divide.” BYJUS, BYJU’S, 23 Dec. 2022, byjus.com/govt-exams/digital-divide-india/.
+                admin1. “Admin1.” Next IAS, 5 Dec. 2022, www.nextias.com/current-affairs/05-12-2022/india-inequality-report-2022-digital-divide/#:~:text=Rural%2Durban%20digital%20divide%3A,urban%20counterparts%2C%20says%20the%20report.
+                Department of Telecommunication, dot.gov.in/sites/default/files/TSI%202022%20BOOK%20FINAL24MB.pdf. Accessed 2 Nov. 2023.
+                India Human Development Survey (IHDS) Series, www.icpsr.umich.edu/web/DSDR/series/00507/publications. Accessed 2 Nov. 2023.
+                “India’s Digital Divide: From Bad to Worse?: IDR.” India Development Review, 16 Feb. 2023, idronline.org/article/inequality/indias-digital-divide-from-bad-to-worse/#:~:text=Government%20schemes%20such%20as%20BharatNet,8.9%20percent%20to%20internet%20facilities.
+                “Learn to Code.” W3Schools Online Web Tutorials, www.w3schools.com/. Accessed 8 Nov. 2023.  “Covid-19 Impacts Education, Deepens Digital Divide.” YouTube, YouTube, 15 Nov. 2020, www.youtube.com/watch?v=IsaoB5PByDE. 
+            </p>
+        </footer>
+    </body>
+    </html>
+
+
+    
